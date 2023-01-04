@@ -1,0 +1,60 @@
+/* Calculator container */
+#calculator {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  background-color: #eee;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Display */
+#calculator .display {
+  flex: 0 0 60px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  font-size: 2em;
+  text-align: right;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Buttons */
+#calculator .button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+}
+
+/* Number buttons */
+#calculator .button:not(.operator) {
+  background-color: #555;
+}
+
+/* Operator buttons */
+#calculator .button.operator {
+  background-color: #f44336;
+}
+
+/* Clear button */
+#calculator .button[data-value="C"] {
+  background-color: #f44336;
+}
+
+/* Equal button */
+#calculator .button[data-value="="] {
+  background-color: #4caf50;
+}
+
+/* Button hover effect */
+#calculator .button:hover {
+  background-color: #333;
+}
